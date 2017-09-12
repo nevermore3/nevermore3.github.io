@@ -1,8 +1,8 @@
 # Basic
 title: JMQ-2005
 subtitle: There is a Will. There is a Way
-welcome_message: <a href="https://github.com/onevcat/vno-jekyll" target="_blank">Download the theme</a>
-description: Vno Jekyll is a port of my Ghost theme vno.
+welcome_message: <a href="https://github.com/nevermore3/nevermore3.github.io.git" target="_blank">Download the theme</a>
+description: 有事好好说，别碰代码.
 creator: <a href="http://onev.cat">@onevcat</a>
 
 url: "http://vno.onevcat.com"
@@ -13,7 +13,7 @@ permalink: /:year/:month/:title/
 highlighter: rouge
 
 # supported colors: blue, green, purple, red, orange or slate. If you need clear, leave it empty.
-cover_color: red
+cover_color: 
 
 # The blog button should not be removed.
 blog_button:
@@ -21,8 +21,8 @@ blog_button:
     description: Visit blog
 
 # Navigation buttons in the front page.
-nav:
-    - {title: Projects, description: My Projects, url: 'http://project.onevcat.com'}
+#nav:
+#   - {title: Projects, description: My Projects, url: 'http://project.onevcat.com'}
     # - {title: Another Button, description: A button, url: 'http://example.com'}
 
 # Pagination
@@ -32,16 +32,15 @@ paginate_path: "page/:num/"
 
 # Comment
 comment:
-    disqus: vno-jekyll
+    disqus: JMQ
     # duoshuo: 
     
 # Social
 social:
-    weibo: onevcat
-    github: onevcat
-    twitter: onevcat
-    gplus: 107108267983477358170
-    mail: onev@onevcat.com
+    QQ: 58863790
+    github: nevermore3
+    #gplus: 107108267983477358170
+    mail: 58863790@qq.com
 
 # Google Analytics
 ga:
