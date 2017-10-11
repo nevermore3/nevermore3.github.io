@@ -45,6 +45,7 @@ python 也提供了一个包codecs进行文件的读取，这个包中的open()�
 	content = f.read() #如果open时候使用的encoding和文件本身的encoding不一致的话，这里会发生错误。
 	f.write('information that you want to write')
 	f.close()
+	
 ---
 Example:  
 
