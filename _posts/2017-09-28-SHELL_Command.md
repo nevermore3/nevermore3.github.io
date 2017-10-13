@@ -1,5 +1,6 @@
 # SHELL 简明教程[http://techlog.cn/article/list/10182710](http://techlog.cn/article/list/10182710 "简明教程")
 ----------
+一个很好的shell资料http://www.lai18.com/content/4700079.html
 ### 参数处理
 
 	$# 传递给脚本的参数的个数
