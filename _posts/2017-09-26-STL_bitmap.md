@@ -1,7 +1,7 @@
-####bitset使用详解（常见的应用是需要对海量数据进行一些统计工作的时候，比如日志分析，用户数统计等）
+#### bitset使用详解（常见的应用是需要对海量数据进行一些统计工作的时候，比如日志分析，用户数统计等）
 
 ----------
-#####bitset的成员函数：any()、none()、count()、size()、test()、set()、reset()、flip()、to\_ulong()、operator[]、to_string()
+##### bitset的成员函数：any()、none()、count()、size()、test()、set()、reset()、flip()、to\_ulong()、operator[]、to_string()
 
 bitset 和数组非常相似， 但是和常规的数组相比， bitset在空间分配上做了优化，即每个元素仅仅占用 one bit（which is eight times less than the smallest elemental type in C++:char）,每个元素都可以独立的随机读取。bitset的参数必须是整形的数值，使用位的方式和数组区别不大
 
@@ -31,11 +31,11 @@ b.flip()  把b中所有的二进制位逐位取反
 b.flip(pos) b中在pos处的二进制位取反  
 b.to\_ulong() 用b中同样的二进制位返回一个unsigned long值
 
-####SET 详解（用红黑树实现）
+#### SET 详解（用红黑树实现）
 
 ----------
 
-#####Set成员函数有：begin()、end()、clear()、empty()、max\_size()、size()
+##### Set成员函数有：begin()、end()、clear()、empty()、max\_size()、size()
 set和map一样是关联式容器，用来存储同一数据类型的数据，在set中每个元素的值都是**唯一**的，并且系统能够根据元素的值自动进行排序.  
 
 	set<int>s;
