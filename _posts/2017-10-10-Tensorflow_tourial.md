@@ -1,7 +1,7 @@
-##tensorflow简明教程
+## tensorflow简明教程
 
 ----------
-####tensorflow是一个采用数据流图(data flow graphs)，用于数值计算的数学开源软件库
+#### tensorflow是一个采用数据流图(data flow graphs)，用于数值计算的数学开源软件库
 **一般而言，使用Tensorflow程序的流程是先创建一个图，然后在session中启动它**  
 
 - Graph: 表示计算任务   
