@@ -1,7 +1,7 @@
-####STL string&List 详解
+#### STL string&List 详解
 
 ----------
-#####String 成员函数有：swap()、push\_back()、append()、insert()、erase()、clear()、repalce()、+、size()、length()、max\_size()、empty()、capacity()、reverse()、begin()、end()、substr()、find()
+##### String 成员函数有：swap()、push\_back()、append()、insert()、erase()、clear()、repalce()、+、size()、length()、max\_size()、empty()、capacity()、reverse()、begin()、end()、substr()、find()
 
 string 可以用来处理字符串文本信息
 
@@ -70,10 +70,10 @@ string 可以用来处理字符串文本信息
 
 
 
-####STL List详解
+#### STL List详解
 
 ----------
-#####List成员函数有：begin()、end()、assign()、front()、back()、empty()、size()、max_size()、clear()、insert()、erase()、push\_back()、pop\_back()、push\_front()、pop\_front()、reverse()、unique()、remove()、remove\_if()、sort()
+##### List成员函数有：begin()、end()、assign()、front()、back()、empty()、size()、max_size()、clear()、insert()、erase()、push\_back()、pop\_back()、push\_front()、pop\_front()、reverse()、unique()、remove()、remove\_if()、sort()
 
 List实际上是一个双向链表，可以高效的进行插入和删除元素。  
 c.begin()  返回指向链表第一个元素的迭代器  
@@ -83,26 +83,26 @@ c.end()    返回指向链表最后一个元素之后的迭代器
 	list<int>::iterator iter;
 	for(iter=a.begin(); iter!=a.end(); iter++)
 		cout<<*iter<<endl;
-c.assign(n, elem) 将n个elem元素拷贝赋值给链表c。  
-c.assign(beg,end) 将[beg, end)区间的元素拷贝赋值给链表c。  
+	c.assign(n, elem) 将n个elem元素拷贝赋值给链表c。  
+	c.assign(beg,end) 将[beg, end)区间的元素拷贝赋值给链表c。  
 
 	int a[6]={23,34,12,545,64,32};
 	list<int>a1;
 	a1.assign(12,323);
 	a1.assign(a,a+6);
-c.front() 返回链表的第一个元素   
-c.back() 返回链表的最后一个元素  
+	c.front() 返回链表的第一个元素   
+	c.back() 返回链表的最后一个元素  
 
 	list<int>a{12,23,5,7,0};
 	int first_elem = a.front();
 	int last_elem = a.end();
-c.empty() 判断链表是否为空。  
-c.size() 返回链表中实际元素的个数  
-c.max_size() 返回链表可能容纳最大元素的个数。  
-c.clear()  清除链表中的所有元素。  
-c.insert(pos , num)  在pos位置插入元素 num。  
-c.insert(pos, n, num) 在pos位置插入n个元素 num。  
-c.insert(pos,beg,end) 在pos位置插入区间[beg,end)的元素。  
+	c.empty() 判断链表是否为空。  
+	c.size() 返回链表中实际元素的个数  
+	c.max_size() 返回链表可能容纳最大元素的个数。  
+	c.clear()  清除链表中的所有元素。  
+	c.insert(pos , num)  在pos位置插入元素 num。  
+	c.insert(pos, n, num) 在pos位置插入n个元素 num。  
+	c.insert(pos,beg,end) 在pos位置插入区间[beg,end)的元素。  
 
 	int arr[5]={23,12,45,67,2};
 	list<int> t;
@@ -110,14 +110,14 @@ c.insert(pos,beg,end) 在pos位置插入区间[beg,end)的元素。
 	t.insert(t.begin(), 0);
 	t.insert(t.begin(),2,34);
 	t.insert(t.begin(), arr, arr+5);
-c.erase(pos)  删除pos位置的元素  
-c.push\_back(elem) 在末尾增加一个元素  
-c.pop\_back()  删除末尾的元素  
-c.push\_front(elem) 在开始位置增加一个元素  
-c.pop\_front()  删除第一个元素
-c.resize(n)  重新定义链表的长度，超出原始长度部分用0代替，小于原始部分删除  
-c.resize(n, elem) 重新定义链表的长度，超出部分用elem元素代替  
-c.remove(elem)  删除链表中元素值等于elem的元素  
-c.reverse()  反转链表  
-c.sort()  链表排序，默认是升序  
-c.sort(compare)  自定义回调函数实现自定义排序。
+	c.erase(pos)  删除pos位置的元素  
+	c.push\_back(elem) 在末尾增加一个元素  
+	c.pop\_back()  删除末尾的元素  
+	c.push\_front(elem) 在开始位置增加一个元素  
+	c.pop\_front()  删除第一个元素
+	c.resize(n)  重新定义链表的长度，超出原始长度部分用0代替，小于原始部分删除  
+	c.resize(n, elem) 重新定义链表的长度，超出部分用elem元素代替  
+	c.remove(elem)  删除链表中元素值等于elem的元素  
+	c.reverse()  反转链表  
+	c.sort()  链表排序，默认是升序  
+	c.sort(compare)  自定义回调函数实现自定义排序。
