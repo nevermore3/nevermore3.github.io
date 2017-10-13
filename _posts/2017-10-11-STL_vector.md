@@ -1,7 +1,7 @@
-###C++ STL 容器详解
-####Vector 使用详解
+### C++ STL 容器详解
+#### Vector 使用详解
 ----------
-#####主要的成员函数有 size()、capacity()、reverse()、resize()、push\_back()、pop\_back()、assign()、begin()、end()、clear()、empty()、max\_size()、erase()
+##### 主要的成员函数有 size()、capacity()、reverse()、resize()、push\_back()、pop\_back()、assign()、begin()、end()、clear()、empty()、max\_size()、erase()
 vector的存储特性：vector是一个容器，它能够像容易一样存放各种类型的对象，是一个动态数组，能够增加和压缩数据  (**底层是用数组实现的**)
 
 c.push_back(elem)在尾部插入一个elem数据  
@@ -91,8 +91,8 @@ c.erase(beg,end)删除[beg,end)区间的数据，传回下一个数据的位置�
 	v.earse(v.begin(), v.end());
 
 
-###FAQ
-#####STL中迭代器详解（STL为每个容器都定义了对应的迭代器）
+### FAQ
+##### STL中迭代器详解（STL为每个容器都定义了对应的迭代器）
 
 ----------
  标准迭代器的语法被设计为类似于普通C指针算术的语法，其中使用 * 和 -> 运算符来引用迭代器所指向的元素，并且使用诸如++的指针算术运算符将迭代器推送到下一个元素. 迭代器通常成对使用，其中一个用于实际的迭代，第二个用于标记集合的结束。迭代器由相应的容器类使用诸如begin（）和end（）之类的标准方法创建。由begin（）返回的迭代器指向第一个元素，而由end（）返回的迭代器是不引用任何元素的特殊值。当迭代器超出最后一个元素时，它的定义等于特殊的结束迭代器值。(所以我们说end（）指向的是最后一个元素的后一位）。综上所述 iterator 像是一个比较聪明的 pointer ， 它可以指到容器内任何一个位置，然后操作那个位置的资料。  
