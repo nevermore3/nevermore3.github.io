@@ -1,0 +1,102 @@
+##Linux 下的find和grep命令详解
+-------------------------------------------
+- **find的使用格式如下：**
+> find <指定目录> <指定条件> <指定动作>  
+>   
+> <指定目录>： 所要搜索的目录及其所有子目录。默认为当前目录 
+> 
+> <指定条件>： 所要搜索的文件的特征。
+> 
+> <指定动作>： 对搜索结果进行特定的处理   
+> **find path   -option  [ -print] [-exec  -ok  command] {}\;**  
+> -print : find命令将匹配到的文件输出到标准输出。  
+> -exec： find命令对匹配的文件执行该参数所给的shell命令 ，而相应命令的形式为'command{} \;'，注意，{} 和\;之间的空格。  
+> -ok： 和-exec的作用相同
+
+	-name  filename           #查找名称为filename的文件  
+	-perm  777                #按照执行权限来查找  
+	-user  username           #按照文件属主来查找
+	-group groupname          #按照分组来查找
+	-mtime -n + n             #按照更改时间来查找文件 -n 指n天以内，+n指n天以前
+	-atime  -n +n             #按照文件访问时间来查找文件
+	-ctime  -n +n			  #按照文件创建时间来查找文件
+	-prune					  #忽略某个目录     
+
+> find使用实例：
+
+	find . -name 'my\*' ：  
+	搜索当前目录（含子目录，以下同）中，所有文件名以my开头的文件。  
+	find . -name 'my\*' -ls  
+	搜索当前目录中，所有文件名以my开头的文件，并显示它们的详细信息
+	find   .  -perm -007   -exec ls -l {} \;   
+	查所有用户都可读写执行的文件同-perm 777 
+	find   /home   -mtime   -2                 
+	在/home下查最近两天内改动过的文件 
+	find /home    -atime -1                  
+	查找1天之内被存取过的文件
+	find   ./  -mtime  -1  -type f  -exec  ls -l {} \;
+	查询当天修改过的文件
+	find logs -type f -mtime +5 -exec   -ok   rm {} \;
+	在/ l o g s目录中查找更改时间在5日以前的文件并删除它们：
+
+
+- **grep的使用格式如下：**  
+
+命令格式  
+
+	grep [option]  pattern  file
+命令参数  
+
+	-C<显示行数>    --context=<显示行数>或-<显示行数>   #除了显示符合样式的那一行之外，并显示该行之前后的内容。
+	-r 是递归查找
+	-n 是显示行号
+	-R 查找所有文件包含子目录
+	-i 忽略大小写
+
+实例1：如果你想在当前目录下 查找"hello,world!"字符串,可以这样:  
+
+	grep -rn "hello,world!" *
+	*:表示当前目录所有文件，也可以是某个文件名
+实例2：从文件中读取关键词进行搜索
+
+	cat test.txt | grep -f test2.txt
+	[root@localhost test]# cat test.txt 
+	hnlinux
+	peida.cnblogs.com
+	ubuntu
+	ubuntu linux
+	redhat
+	Redhat
+	linuxmint
+	[root@localhost test]# cat test2.txt 
+	linux
+	Redhat
+	[root@localhost test]# cat test.txt | grep -f test2.txt
+	hnlinux
+	ubuntu linux
+	Redhat
+	linuxmint
+	[root@localhost test]#
+	说明：输出test.txt文件中含有从test2.txt文件中读取出的关键词的内容行
+实例3：从文件中读取关键词进行搜索 且显示行号
+	
+	cat test.txt | grep -nf test2.txt
+	输出：
+	[root@localhost test]# cat test.txt 
+	hnlinux
+	peida.cnblogs.com
+	ubuntu
+	ubuntu linux
+	redhat
+	Redhat
+	linuxmint
+	[root@localhost test]# cat test2.txt 
+	linux
+	Redhat
+	[root@localhost test]# cat test.txt | grep -nf test2.txt
+	1:hnlinux
+	4:ubuntu linux
+	6:Redhat
+	7:linuxmint
+	[root@localhost test]#
+	说明：输出test.txt文件中含有从test2.txt文件中读取出的关键词的内容行，并显示每一行的行号
