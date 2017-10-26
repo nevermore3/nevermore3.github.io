@@ -22,3 +22,8 @@
 ![](https://marklodato.github.io/visual-git-guide/reset-commit.svg)
 如果没有给出提交点的版本号，那么默认用HEAD，这样，分支指向不变，但是索引会回滚到最后一次提交，如果用--hard选项，工作目录也同样。
 ![](https://marklodato.github.io/visual-git-guide/reset.svg)
+
+
+- [stash](https://git-scm.com/book/en/v1/Git-Tools-Stashing)
+
+> 当你正在进行项目中某一部分的工作，里面的东西处于一个比较杂乱的状态，而你想转到其他分支上进行一些工作。问题是，你不想提交进行了一半的工作，否则以后你无法回到这个工作点。解决这个问题的办法就是git stash命令,“‘储藏”“可以获取你工作目录的中间状态——也就是你修改过的被追踪的文件和暂存的变更——并将它保存到一个未完结变更的堆栈中，随时可以重新应用。
